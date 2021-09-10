@@ -6,8 +6,8 @@
 }
 
 :root {
-  --pink: #fb88c9;
-  --purple: #e785ea;
+  --pink: #fdc4e4;
+  --purple: #eea8f0;
   --blue-1: #66688f;
   --blue-2: #05418a;
   --blue-3: #023a50;
@@ -23,10 +23,6 @@
   text-align: center;
 }
 
-.title:hover {
-    cursor: pointer;
-}
-
 .subtitle {
   background-color: var(--blue-2);
   color: #fff;
@@ -34,30 +30,86 @@
   justify-content: space-between;
   padding: 1em;
   text-align: center;
+  font-size: 24px;
+}
+
+.subtitle h2 {
+    transition: all 0.3s ease 0s;
 }
 
 #local-storage-el:hover {
   cursor: pointer;
+  transform: translateX(7px) translateY(7px);
 }
 
 /* main */
 
 main {
-    height: 90vh;
+  height: 90vh;
+  display: flex;
+  background-color: var(--pink);
+}
+
+section {
+  background-color: var(--purple);
+  width: 80%;
+  min-height: 80%;
+  margin: 0 auto;
+  border-radius: 8px;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+section h3 {
+  font-size: 44px;
+}
+
+section p {
+  font-size: 24px;
+}
+
+.intro {
+  text-align: center;
+}
+
+section button {
+    background-color: var(--pink);
+    border: none;
+    border-radius: 8px;
+    font-size: 44px;
+    width: 30%;
+    margin: 0 auto;
+    box-shadow: 0 15px 10px #66688f3a;
+    transition: all 0.3s ease 0s;
+}
+
+section button:hover {
+    cursor: pointer;
+    box-shadow: 0 15px 10px #66688f;
+    transform: translateY(-7px);
+}
+
+.intro h3 {
+  font-size: 36px;
 }
 
 /* footer */
 
 footer {
-    background-color: var(--blue-3);
-    padding: 1em;
+  background-color: var(--blue-3);
+  padding: 1em;
 }
 
 footer h4 {
-    font-size: 36px;
-    color: #fff;
+  font-size: 36px;
+  color: #fff;
+  transition: all 0.3s ease 0s;
 }
 
 footer h4:hover {
-    cursor: pointer;
+  cursor: pointer;
+  transform: translateX(7px) translateY(-7px);
+  width: auto;
 }
