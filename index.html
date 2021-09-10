@@ -1,12 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Code Quiz</title>
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1 class="title">Michael's Code Quiz</h1>
+      <div class="subtitle">
+        <h2 id="local-storage-el">View High Scores</h2>
+        <h2>Time Remaining: <span id="timerEl">100</span></h2>
+      </div>
+    </header>
+    <main>
+        <section class="intro">
+            <h3>Coding Quiz Challenge</h3>
+            <p>Answer the following multiple choice questions to test your programming skills! A score will be calculated based on how many questions you answer correctly and how quickly you complete the quiz. Answering questions incorrectly reduces the amount of time remaining by 10 seconds. Enjoy!</p>
+            <button id="start-button">Start Quiz!</button>
+        </section>
+    </main>
+    <footer>
+        <h4>Github Repository</h4>
+    </footer>
+    <script type="text/Javascript" src="assets/js/quiz.js"></script>
+  </body>
 </html>

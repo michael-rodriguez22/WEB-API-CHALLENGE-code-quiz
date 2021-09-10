@@ -1,0 +1,63 @@
+/* general / utility */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --pink: #fb88c9;
+  --purple: #e785ea;
+  --blue-1: #66688f;
+  --blue-2: #05418a;
+  --blue-3: #023a50;
+}
+
+/* header */
+
+.title {
+  background-color: var(--blue-3);
+  color: #fff;
+  font-size: 52px;
+  padding: 0.5em 0;
+  text-align: center;
+}
+
+.title:hover {
+    cursor: pointer;
+}
+
+.subtitle {
+  background-color: var(--blue-2);
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  text-align: center;
+}
+
+#local-storage-el:hover {
+  cursor: pointer;
+}
+
+/* main */
+
+main {
+    height: 90vh;
+}
+
+/* footer */
+
+footer {
+    background-color: var(--blue-3);
+    padding: 1em;
+}
+
+footer h4 {
+    font-size: 36px;
+    color: #fff;
+}
+
+footer h4:hover {
+    cursor: pointer;
+}
