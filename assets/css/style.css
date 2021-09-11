@@ -5,111 +5,178 @@
   margin: 0;
 }
 
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
 :root {
-  --pink: #fdc4e4;
-  --purple: #eea8f0;
-  --blue-1: #66688f;
-  --blue-2: #05418a;
-  --blue-3: #023a50;
+  --pink: #FFD6ED;
+  --purple: #A47FB9;
+  --navy-1: #7C7EA2;
+  --navy-2: #5D5F83;
+  --text-light: #f5f5f5;
+  --text-dark: #333333
+}
+
+.hide {
+  display: none;
 }
 
 /* header */
 
 .title {
-  background-color: var(--blue-3);
-  color: #fff;
-  font-size: 52px;
+  background-color: var(--navy-2);
+  color: var(--text-light);
+  font-size: 44px;
   padding: 0.5em 0;
   text-align: center;
 }
 
 .subtitle {
-  background-color: var(--blue-2);
+  background-color: var(--navy-1);
   color: #fff;
   display: flex;
   justify-content: space-between;
-  padding: 1em;
+  padding: 0.5em 1em 1em;
   text-align: center;
-  font-size: 24px;
 }
 
 .subtitle h2 {
-    transition: all 0.3s ease 0s;
+  font-size: 24px;
+  transition: all 0.3s ease 0s;
+  color: #fff;
 }
 
 #local-storage-el:hover {
   cursor: pointer;
-  transform: translateX(7px) translateY(7px);
+  transform: translateY(-5px);
 }
 
 /* main */
 
 main {
-  height: 90vh;
+  min-height: 90%;
   display: flex;
   background-color: var(--pink);
 }
 
+/* general section styling */
 section {
   background-color: var(--purple);
   width: 80%;
-  min-height: 80%;
   margin: 0 auto;
   border-radius: 8px;
   align-self: center;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-}
-
-section h3 {
-  font-size: 44px;
+  color: var(--text-dark);
 }
 
 section p {
   font-size: 24px;
 }
 
-.intro {
-  text-align: center;
-}
-
 section button {
-    background-color: var(--pink);
-    border: none;
-    border-radius: 8px;
-    font-size: 44px;
-    width: 30%;
-    margin: 0 auto;
-    box-shadow: 0 15px 10px #66688f3a;
-    transition: all 0.3s ease 0s;
+  background-color: var(--pink);
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 15px 10px #66688f3a;
+  transition: all 0.3s ease 0s;
 }
 
 section button:hover {
-    cursor: pointer;
-    box-shadow: 0 15px 10px #66688f;
-    transform: translateY(-7px);
+  cursor: pointer;
+  box-shadow: 0 15px 10px #66688f;
+  transform: translateY(-5px);
+}
+
+/* intro */
+.intro {
+  text-align: center;
+  justify-content: space-evenly;
 }
 
 .intro h3 {
   font-size: 36px;
 }
 
+.intro button {
+  font-size: 44px;
+  width: 30%;
+  margin: 0 auto;
+}
+
+/* question-card */
+.question-card {
+  padding: 0 10%;
+}
+
+#question-text-el {
+  font-size: 40px;
+  text-align: center;
+  padding: 1.5em 0 0.3em;
+  border-bottom: 3px solid var(--text-dark);
+}
+
+#answers-container-el {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1em 0;
+  border-bottom: 3px solid var(--text-dark);
+}
+
+.answer-choice {
+  width: 70%;
+  font-size: 24px;
+  text-align: left;
+  padding: 0.7em;
+  margin: 0.5em auto;
+}
+
+#question-notification-el {
+  margin: 1em;
+  font-style: italic; 
+  font-size: 20px;
+}
+
+.question-submit {
+  width: 25%;
+  margin: 0 auto 1em;
+  font-size: 32px;
+}
+
 /* footer */
 
 footer {
-  background-color: var(--blue-3);
+  background-color: var(--navy-2);
   padding: 1em;
+  display: flex;
+}
+
+footer a {
+  text-decoration: none;
+  display: flex;
+  transition: all 0.3s ease 0s;
+}
+
+footer a:hover {
+  cursor: pointer;
+  transform: translateY(-5px);
 }
 
 footer h4 {
   font-size: 36px;
   color: #fff;
-  transition: all 0.3s ease 0s;
+  margin-right: 1em;
 }
 
-footer h4:hover {
-  cursor: pointer;
-  transform: translateX(7px) translateY(-7px);
-  width: auto;
+.github-icon {
+  width: 45px;
+  height: 45px;
 }

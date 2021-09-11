@@ -12,17 +12,45 @@
       <h1 class="title">Michael's Code Quiz</h1>
       <div class="subtitle">
         <h2 id="local-storage-el">View High Scores</h2>
-        <h2>Time Remaining: <span id="timerEl">100</span></h2>
+        <h2 id="timerEl">Time Remaining: 100</h2>
       </div>
     </header>
     <main>
-        <section class="intro">
-            <p>Answer the following multiple choice questions to test your programming skills! A score will be calculated based on how many questions you answer correctly and how quickly you complete the quiz. Answering questions incorrectly reduces the amount of time remaining by 10 seconds. Enjoy!</p>
-            <button id="start-button">Start Quiz!</button>
-        </section>
+      <section class="intro hide">
+        <p>
+          Answer the following multiple choice questions to test your
+          programming skills! A score will be calculated based on how many
+          questions you answer correctly and how quickly you complete the quiz.
+          Answering questions incorrectly reduces the amount of time remaining
+          by 10 seconds. Enjoy!
+        </p>
+        <button id="start-button">Start Quiz!</button>
+      </section>
+      <section class="question-card">
+        <h3 id="question-text-el">What is the answer?</h3>
+        <div id="answers-container-el">
+          <button class="answer-choice">A) The answer is this.</button>
+          <button class="answer-choice">B) The answer is this.</button>
+          <button class="answer-choice">C) The answer is this.</button>
+          <button class="answer-choice">D) The answer is this.</button>
+        </div>
+        <div id="question-notification-el">
+          <p>Incorrect. The correct answer was: A) The answer is this.</p>
+        </div>
+        <button id="skip-button-el" class="question-submit">Skip</button>
+        <button id="continue-button-el" class="question-submit hide">Continue</button>
+      </section>
+      <section class="results hide"></section>
+      <section class="high-scores hide"></section>
     </main>
     <footer>
+      <a
+        href="https://github.com/mikeyrod22/WEB-API-CHALLENGE-code-quiz"
+        target="_blank"
+      >
         <h4>Github Repository</h4>
+        <img class="github-icon" src="assets/images/icons8-github-60.png" />
+      </a>
     </footer>
     <script type="text/Javascript" src="assets/js/quiz.js"></script>
   </body>
