@@ -149,6 +149,7 @@ section button:hover {
   width: 25%;
   margin: 0 auto 1em;
   font-size: 32px;
+  padding: 0.5em;
 }
 
 /* footer */
