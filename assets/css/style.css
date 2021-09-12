@@ -120,7 +120,6 @@ section button {
 
 .intro p {
   margin: 1em 0 0 1em;
-  font-size: 24px;
   font-weight: bold;
 }
 
@@ -128,6 +127,7 @@ section button {
   list-style: inside;
   font-size: 24px;
   margin: 1em auto;
+  list-style-position: outside;
 }
 
 .intro button {
@@ -183,7 +183,7 @@ section button {
 .results p {
   font-size: 28px;
   margin-bottom: 0.5em;
-  font-weight: 500;
+  font-weight: bold;
 }
 
 #initials {
@@ -243,3 +243,137 @@ footer h4 {
   width: 45px;
   height: 45px;
 }
+
+/* media queries */
+/* medium screens */
+@media screen and (max-width: 1020px) {
+  section h3 {
+    font-size: 28px;
+  }
+
+  section p {
+    font-size: 20px;
+  }
+
+  .intro ul {
+    font-size: 20px;
+  }
+
+  .intro button {
+    width: 50%;
+    font-size: 28px;
+  }
+
+  .answer-choice {
+    font-size: 20px;
+  }
+
+  .question-submit {
+    width: 60%;
+    font-size: 24px;
+  }
+
+  .high-scores button {
+    width: 60%;
+    font-size: 24px;
+  }
+
+  footer {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 36px;
+  }
+  
+  .subtitle h2 {
+    font-size: 20px;
+  }
+
+  main {
+    min-height: 83%;
+  }
+
+  section {
+    min-height: 420px;
+  }
+
+  section h3 {
+    font-size: 24px;
+  }
+
+
+  .intro button {
+    font-size: 24px;
+  }
+
+  .answer-choice {
+    font-size: 16px;
+  }
+
+  .high-scores button {
+    font-size: 20px;
+  }
+
+  footer h4 {
+    font-size: 28px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .title {
+    font-size: 24px;
+  }
+  
+  .subtitle h2 {
+    font-size: 16px;
+  }
+
+  section {
+    width: 100%;
+    border-radius: unset;
+  }
+
+  section h3 {
+    font-size: 18px;
+  }
+
+  .intro button {
+    width: 85%;
+    font-size: 20px;
+  }
+
+  .answer-choice {
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .question-submit {
+    font-size: 20px;
+    width: 100%;
+  }
+
+  .results p {
+    font-size: 20px;
+  }
+
+  .results button {
+    width: 100%;
+  }
+
+  .high-scores button {
+    width: 90%;
+  }
+
+  footer h4 {
+    font-size: 24px;
+  }
+
+  .github-icon {
+    height: 30px;
+    width: 30px;
+  }
+}
+
