@@ -15,7 +15,7 @@ const questions = [
     answers: [
       "A) myArray(3)",
       "B) myArray[3]",
-      "C) myArray [2]",
+      "C) myArray[2]",
       "D) myArray.3",
     ],
     correct: "C",

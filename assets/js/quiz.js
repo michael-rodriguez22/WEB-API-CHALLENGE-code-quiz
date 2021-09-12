@@ -105,7 +105,9 @@ function renderResults() {
   score = timeRemaining + correctQuestions * 10;
   sections.questionCard.style.display = "none";
   sections.results.style.display = "flex";
-  document.getElementById("correct-questions-el").innerText = `${correctQuestions}/10`;
+  document.getElementById(
+    "correct-questions-el"
+  ).innerText = `${correctQuestions}/10`;
   document.getElementById("time-remaining-el").innerText = timeRemaining;
   document.getElementById("final-score-el").innerText = score;
   document.getElementById("initials").value = "";
@@ -119,7 +121,7 @@ function saveScore() {
     document.getElementById("invalid-initials-message").style.display = "unset";
   } else {
     let store = window.localStorage.getItem(localStorageKey);
-    let payload = {initials: initials, score: score}
+    let payload = { initials: initials, score: score };
     if (store) {
       let newStore = JSON.parse(store);
       newStore.push(payload);
@@ -142,10 +144,11 @@ function renderHighScores() {
   for (item in sections) sections[item].style.display = "none";
   sections.highScores.style.display = "flex";
   document.getElementById("high-scores-ol").innerHTML = "";
-  document.getElementById("clear-scores-button").style.display = "none;";
+  document.getElementById("clear-scores-button").style.display = "none";
   let store = window.localStorage.getItem(localStorageKey);
   if (store) {
     document.getElementById("empty-storage-message").style.display = "none";
+    document.getElementById("clear-scores-button").style.display = "unset";
     store = JSON.parse(store).sort((a, b) => (a.score < b.score ? 1 : -1));
     for (let i = 0; i < store.length; i++) {
       let li = document.createElement("li");
