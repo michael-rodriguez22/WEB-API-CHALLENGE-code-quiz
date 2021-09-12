@@ -17,14 +17,31 @@
       </div>
     </header>
     <main>
-      <section class="intro hide">
-        <p>
-          Answer the following multiple choice questions to test your
-          programming skills! A score will be calculated based on how many
-          questions you answer correctly and how quickly you complete the quiz.
-          Answering questions incorrectly reduces the amount of time remaining
-          by 10 seconds. Enjoy!
-        </p>
+      <section class="intro">
+        <h3>
+          Hello World!
+        </h3>
+        <p>Welcome to my multiple choice, timed programming quiz. Here are the rules:</p>
+        <ul>
+          <li>
+            You will have 300 seconds to complete the quiz.
+          </li>
+          <li>
+            You may skip as many questions as you like.
+          </li>
+          <li>
+            Answers can not be changed once selected.
+          </li>
+          <li>
+            30 seconds will be deducted for incorrect answers.
+          </li>
+          <li>
+            Correct answers will increase your score by 50 points.
+          </li>
+          <li>
+            Every second of time remaining at quiz completion will increase your score by 10 points.
+          </li>
+        </ul>
         <button id="start-button">Start Quiz!</button>
       </section>
       <section class="question-card hide">
@@ -43,7 +60,7 @@
           Continue
         </button>
       </section>
-      <section class="results">
+      <section class="results hide">
         <p>Number of questions answered correctly:</p>
         <p id="correct-questions-el">10/10</p>
         <p>Time Remaining:</p>

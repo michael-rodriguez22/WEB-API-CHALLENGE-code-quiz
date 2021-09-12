@@ -116,6 +116,17 @@ section button:hover {
   font-size: 36px;
 }
 
+.intro p {
+  font-size: 24px;
+}
+
+.intro ul {
+ list-style: disc;
+ font-size: 24px;
+ margin: 0 auto;
+ width: 70%; 
+}
+
 .intro button {
   font-size: 44px;
   width: 30%;
@@ -167,7 +178,6 @@ section button:hover {
 .results {
   text-align: center;
   padding: 4em;
-  display: flex;
   justify-content: space-evenly;
 }
 

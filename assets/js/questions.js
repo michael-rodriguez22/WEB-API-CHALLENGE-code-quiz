@@ -11,7 +11,7 @@ const questions = [
   },
   {
     question:
-      "How would you properly access the third item of an array named 'myArray'?",
+      "How would you properly access the third item of an array named 'myArray' in Javascript?",
     answers: [
       "A) myArray(3)",
       "B) myArray[3]",
@@ -22,7 +22,7 @@ const questions = [
   },
   {
     question:
-      "Which of the following values is considered truthy in javascript?",
+      "Which of the following values is considered truthy in Javascript?",
     answers: ["A) undefined", 'B) "0"', "C) 0", 'D) ""'],
     correct: "B",
   },
@@ -63,7 +63,7 @@ const questions = [
     correct: "D",
   },
   {
-    question: "What is one advantage of using GraphQL ?",
+    question: "What is one advantage of using GraphQL?",
     answers: [
       "A) You are able to display data from your server in a preformatted graph.",
       "B) GraphQL is the only way to make requests to a database with a Node.js backend.",
