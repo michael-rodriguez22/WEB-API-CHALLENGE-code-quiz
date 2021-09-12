@@ -42,6 +42,10 @@ body {
   text-align: center;
 }
 
+.title:hover {
+  cursor: pointer;
+}
+
 .subtitle {
   background-color: var(--navy-1);
   color: #fff;
