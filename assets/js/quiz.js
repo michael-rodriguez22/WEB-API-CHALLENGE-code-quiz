@@ -21,8 +21,29 @@ function pageLoad() {
 
 pageLoad();
 
+// render question
+let questionCounter = 0;
+
+function renderQuestion(question) {
+  sections.intro.style.display = "none";
+  sections.questionCard.style.display = "flex";
+  document.getElementById("question-text-el").innerText = question.text;
+  for (let i = 0; i < question.answers.length; i++) {
+    let btn = document.createElement("button");
+    btn.className = "answer-choice";
+    btn.innerText = question.answers[i];
+    // btn.onclick = captureAnswer();
+    document.getElementById("answers-container-el").appendChild(btn)
+  }
+}
+
 // begin quiz
-function beginQuiz() {}
+function beginQuiz() {
+  // beginCountDown();
+  questionCounter = 0;
+  renderQuestion(questions[questionCounter])
+}
+
 // begin quiz
 // timer starts counting down
 // render first question

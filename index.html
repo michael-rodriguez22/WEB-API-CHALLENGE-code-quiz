@@ -42,23 +42,21 @@
             Every second of time remaining at quiz completion will increase your score by 10 points.
           </li>
         </ul>
-        <button id="start-button">Start Quiz!</button>
+        <button onclick="beginQuiz()">Start Quiz!</button>
       </section>
       <section id="question-card" class="question-card ">
-        <h3 id="question-text-el">What is the answer?</h3>
+        <h3 id="question-text-el"></h3>
         <div id="answers-container-el">
-          <button class="answer-choice">A) The answer is this.</button>
+          <!-- <button class="answer-choice">A) The answer is this.</button>
           <button class="answer-choice">B) The answer is this.</button>
           <button class="answer-choice">C) The answer is this.</button>
-          <button class="answer-choice">D) The answer is this.</button>
+          <button class="answer-choice">D) The answer is this.</button> -->
         </div>
-        <div id="question-notification-el">
-          <p>Incorrect. The correct answer was: A) The answer is this.</p>
-        </div>
+        <div id="question-notification-el"></div>
         <button id="skip-button-el" class="question-submit">Skip</button>
-        <button id="continue-button-el" class="question-submit ">
-          Continue
-        </button>
+        <!-- <button id="continue-button-el" class="question-submit"> -->
+          <!-- Continue -->
+        <!-- </button> -->
       </section>
       <section id="results" class="results ">
         <p>Number of questions answered correctly:</p>

@@ -1,6 +1,6 @@
 const questions = [
   {
-    question: "How you properly link a stylesheet to an HTML page?",
+    text: "How do you properly link a stylesheet to an HTML page?",
     answers: [
       'A) <link rel="stylesheet" href="./style.css" />',
       'B) <link rel="stylesheet" src="./style.css" />',
@@ -10,7 +10,7 @@ const questions = [
     correct: "A",
   },
   {
-    question:
+    text:
       "How would you properly access the third item of an array named 'myArray' in Javascript?",
     answers: [
       "A) myArray(3)",
@@ -21,13 +21,13 @@ const questions = [
     correct: "C",
   },
   {
-    question:
+    text:
       "Which of the following values is considered truthy in Javascript?",
     answers: ["A) undefined", 'B) "0"', "C) 0", 'D) ""'],
     correct: "B",
   },
   {
-    question: "What is a regular expression?",
+    text: "What is a regular expression?",
     answers: [
       "A) A pattern for matching characters or groups of characters in strings.",
       "B) Any singular arithmetic operation, such as multiplying a number by another number.",
@@ -37,13 +37,13 @@ const questions = [
     correct: "A",
   },
   {
-    question:
+    text:
       "Which of the following time complexities is most efficient as input size increases?",
     answers: ["A) O(n)", "B) O(log n)", "C) O(1)", "D) O(n log n)"],
     correct: "C",
   },
   {
-    question: "Which of the following best describes Node.js?",
+    text: "Which of the following best describes Node.js?",
     answers: [
       "A) A Javascript library designed to more easily interface with the DOM.",
       "B) A platform for hosting websites and web apps.",
@@ -53,7 +53,7 @@ const questions = [
     correct: "C",
   },
   {
-    question: "What does ORM stand for?",
+    text: "What does ORM stand for?",
     answers: [
       "A) Objective Regulation Mechanism",
       "B) Official React Manual",
@@ -63,7 +63,7 @@ const questions = [
     correct: "D",
   },
   {
-    question: "What is one advantage of using GraphQL?",
+    text: "What is one advantage of using GraphQL?",
     answers: [
       "A) You are able to display data from your server in a preformatted graph.",
       "B) GraphQL is the only way to make requests to a database with a Node.js backend.",
@@ -73,7 +73,7 @@ const questions = [
     correct: "D",
   },
   {
-    question:
+    text:
       "Which of the following is the best description of Responsive Web Design?",
     answers: [
       "A) Implementing user feedback and review functionality in all of your websites.",
@@ -84,7 +84,7 @@ const questions = [
     correct: "C",
   },
   {
-    question: "What is a Progressive Web Application?",
+    text: "What is a Progressive Web Application?",
     answers: [
       "A) An app that must be downloaded on a mobile device through an app store.",
       "B) An app that uses tools such as service workers and manifests to replicate functionalities of native apps.",
