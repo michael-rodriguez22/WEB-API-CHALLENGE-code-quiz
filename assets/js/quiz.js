@@ -63,9 +63,23 @@ function renderResults() {
 }
 
 // render high scores
+let localStorageKey = "WEB-APIS-CHALLENGE-code-quiz-mikeyrod22"
 function renderHighScores() {
   for (item in sections) sections[item].style.display = "none";
   sections.highScores.style.display = "flex";
+  document.getElementById("high-scores-ol").innerHTML = "";
+  document.getElementById("clear-scores-button").style.display = "none;"
+  let store = window.localStorage.getItem(localStorageKey);
+  if (store) {
+    document.getElementById("empty-storage-message").style.display = "none";
+    store = JSON.parse(store).sort((a,b) => (a.score < b.score) ? 1 : -1)
+    for (let i = 0; i < store.length; i++) {
+      let li = document.createElement("li");
+      li.innerText = `${store[i].initials}: ${store[i].score}`
+      document.getElementById("high-scores-ol").appendChild(li);
+    }
+
+  }
 }
 
 // begin quiz

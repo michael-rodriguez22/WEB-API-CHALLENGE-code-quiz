@@ -197,6 +197,12 @@ section button:hover {
 }
 
 /* high scores */
+.high-scores p {
+  text-align: center;
+  font-size: 32px;
+  margin-top: 1em;
+}
+
 .high-scores ol {
   margin: 1em 0;
   font-size: 24px;
@@ -211,7 +217,6 @@ section button:hover {
 }
 
 /* footer */
-
 footer {
   background-color: var(--navy-2);
   padding: 1em;
