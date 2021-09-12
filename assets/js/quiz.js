@@ -14,11 +14,7 @@ let correctQuestions;
 let score;
 function pageLoad() {
   timerEl.style.display = "none";
-  for (item in sections) {
-    if (item !== "intro") {
-      sections[item].style.display = "none";
-    }
-  }
+  for (item in sections) sections[item].style.display = "none";
   sections.intro.style.display = "flex";
   questionCounter = 0;
   correctQuestions = 0;
@@ -66,6 +62,11 @@ function renderResults() {
   document.getElementById("final-score-el").innerText = score; 
 }
 
+// render high scores
+function renderHighScores() {
+  for (item in sections) sections[item].style.display = "none";
+  sections.highScores.style.display = "flex";
+}
 
 // begin quiz
 // timer starts counting down

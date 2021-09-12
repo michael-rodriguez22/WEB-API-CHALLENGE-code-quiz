@@ -12,8 +12,8 @@
     <header>
       <h1 class="title" onclick="pageLoad()">Michael's Code Quiz</h1>
       <div class="subtitle">
-        <h2 id="local-storage-el">View High Scores</h2>
-        <h2 id="timer-el">Time Remaining: 100</h2>
+        <h2 class="local-storage"onclick="renderHighScores()">View High Scores</h2>
+        <h2 id="timer-el"></h2>
       </div>
     </header>
     <main>
@@ -21,7 +21,7 @@
         <h3>
           Hello World!
         </h3>
-        <p>Welcome to my multiple choice, timed programming quiz. Here are the rules:</p>
+        <p>Welcome to my timed programming quiz. Here are the rules:</p>
         <ul>
           <li>
             You will have 300 seconds to complete the quiz.
@@ -71,7 +71,13 @@
         <button id="save-button-el">Save Score</button>
         <button onclick="pageLoad()">Retake Quiz</button>
       </section>
-      <section id="high-scores" class="high-scores "></section>
+      <section id="high-scores" class="high-scores ">
+        <h3>High Scores</h3>
+        <ol id="high-scores-ol">
+        </ol>
+        <button onclick="pageLoad()">Return to Quiz</button>
+        <button>Clear Saved Scores</button>
+      </section>
     </main>
     <footer>
       <a

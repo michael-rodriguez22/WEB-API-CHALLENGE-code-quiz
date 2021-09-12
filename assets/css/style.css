@@ -61,7 +61,7 @@ body {
   color: #fff;
 }
 
-#local-storage-el:hover {
+.local-storage:hover {
   cursor: pointer;
   transform: translateY(-5px);
 }
@@ -80,6 +80,7 @@ section {
   width: 80%;
   min-height: 500px;
   margin: 0 auto;
+  padding: 1em 10% 0.5em;
   border-radius: 8px;
   align-self: center;
   display: flex;
@@ -89,7 +90,10 @@ section {
 
 section h3 {
   font-size: 36px;
+  text-align: center;
+  padding-bottom: 0.3em;
   color: var(--text-dark);
+  border-bottom: 3px solid var(--text-dark);
 }
 
 section p {
@@ -112,42 +116,29 @@ section button:hover {
 
 /* intro */
 .intro {
-  text-align: center;
-  justify-content: space-evenly;
-}
-
-.intro h3 {
-  font-size: 36px;
+  text-align: left;
 }
 
 .intro p {
+  margin: 1em 0 0 1em;
   font-size: 24px;
+  font-weight: bold;
 }
 
 .intro ul {
- list-style: disc;
+ list-style: inside;
  font-size: 24px;
- margin: 0 auto;
- width: 70%; 
+ margin: 1em auto; 
 }
 
 .intro button {
-  font-size: 44px;
+  font-size: 32px;
   width: 30%;
   margin: 0 auto;
+  padding: 0.5em;
 }
 
 /* question-card */
-.question-card {
-  padding: 0 10%;
-}
-
-#question-text-el {
-  text-align: center;
-  padding: 1.5em 0 0.3em;
-  border-bottom: 3px solid var(--text-dark);
-}
-
 #answers-container-el {
   display: flex;
   flex-direction: column;
@@ -202,6 +193,21 @@ section button:hover {
   width: 50%;
   margin: 1em auto 0;
   font-size: 28px;
+  padding: 0.5em 0;
+}
+
+/* high scores */
+.high-scores ol {
+  margin: 1em 0;
+  font-size: 24px;
+  align-self: center;
+}
+
+.high-scores button {
+  width: 50%;
+  margin: 1em auto 0;
+  font-size: 28px;
+  padding: 0.5em 0;
 }
 
 /* footer */
