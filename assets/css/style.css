@@ -195,6 +195,7 @@ section button:hover {
   font-size: 28px;
   width: 75%;
   margin: 0 auto;
+  text-align: center;
 }
 
 .results button {

@@ -9,6 +9,9 @@ const sections = {
 
 
 // page load
+let questionCounter;
+let correctQuestions;
+let score;
 function pageLoad() {
   timerEl.style.display = "none";
   for (item in sections) {
@@ -16,18 +19,27 @@ function pageLoad() {
       sections[item].style.display = "none";
     }
   }
-  console.log("load")
+  sections.intro.style.display = "flex";
+  questionCounter = 0;
+  correctQuestions = 0;
+  score = 0;
 }
-
 pageLoad();
 
-// render question
-let questionCounter = 0;
+// begin quiz
+function beginQuiz() {
+  // beginCountDown();
+  questionCounter = 0;
+  renderQuestion(questions[questionCounter])
+}
 
+// render question
 function renderQuestion(question) {
+  if (questionCounter >= questions.length) return renderResults();
   sections.intro.style.display = "none";
   sections.questionCard.style.display = "flex";
   document.getElementById("question-text-el").innerText = question.text;
+  document.getElementById("answers-container-el").innerHTML = "";
   for (let i = 0; i < question.answers.length; i++) {
     let btn = document.createElement("button");
     btn.className = "answer-choice";
@@ -37,12 +49,23 @@ function renderQuestion(question) {
   }
 }
 
-// begin quiz
-function beginQuiz() {
-  // beginCountDown();
-  questionCounter = 0;
-  renderQuestion(questions[questionCounter])
+// capture answer
+
+// skip question
+function skipQuestion() {
+  questionCounter ++;
+  renderQuestion(questions[questionCounter]);
 }
+
+// render results
+function renderResults() {
+  sections.questionCard.style.display = "none";
+  sections.results.style.display = "flex";
+  document.getElementById("correct-questions-el").innerText = `${correctQuestions}/10`;
+  // document.getElementById("time-remaining-el").innerText = timeRemaining; 
+  document.getElementById("final-score-el").innerText = score; 
+}
+
 
 // begin quiz
 // timer starts counting down

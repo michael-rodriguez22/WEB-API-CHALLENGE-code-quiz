@@ -47,24 +47,20 @@
       <section id="question-card" class="question-card ">
         <h3 id="question-text-el"></h3>
         <div id="answers-container-el">
-          <!-- <button class="answer-choice">A) The answer is this.</button>
-          <button class="answer-choice">B) The answer is this.</button>
-          <button class="answer-choice">C) The answer is this.</button>
-          <button class="answer-choice">D) The answer is this.</button> -->
         </div>
         <div id="question-notification-el"></div>
-        <button id="skip-button-el" class="question-submit">Skip</button>
+        <button class="question-submit" onclick="skipQuestion()">Skip</button>
         <!-- <button id="continue-button-el" class="question-submit"> -->
           <!-- Continue -->
         <!-- </button> -->
       </section>
       <section id="results" class="results ">
         <p>Number of questions answered correctly:</p>
-        <p id="correct-questions-el">10/10</p>
+        <p id="correct-questions-el"></p>
         <p>Time Remaining:</p>
-        <p id="time-remaining-el">15/50</p>
+        <p id="time-remaining-el"></p>
         <p>Final score:</p>
-        <p id="final-score-el">650</p>
+        <p id="final-score-el"></p>
         <input
           type="text"
           name="initials"
@@ -73,7 +69,7 @@
           maxlength="3"
         />
         <button id="save-button-el">Save Score</button>
-        <button id="retake-button-el">Retake Quiz</button>
+        <button onclick="pageLoad()">Retake Quiz</button>
       </section>
       <section id="high-scores" class="high-scores "></section>
     </main>
