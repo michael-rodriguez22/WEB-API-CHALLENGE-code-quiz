@@ -10,51 +10,44 @@
   </head>
   <body>
     <header>
-      <h1 class="title" onclick="pageLoad()">Michael's Code Quiz</h1>
+      <h1 class="title hoverable-text" onclick="pageLoad()">Michael's Code Quiz</h1>
       <div class="subtitle">
-        <h2 class="local-storage"onclick="renderHighScores()">View High Scores</h2>
+        <h2 class="hoverable-text" onclick="renderHighScores()">
+          View High Scores
+        </h2>
         <h2 id="timer-el"></h2>
       </div>
     </header>
     <main>
       <section id="intro" class="intro">
-        <h3>
-          Hello World!
-        </h3>
+        <h3>Hello World!</h3>
         <p>Welcome to my timed programming quiz. Here are the rules:</p>
         <ul>
+          <li>You will have 300 seconds to complete the quiz.</li>
+          <li>You may skip as many questions as you like.</li>
+          <li>Answers can not be changed once selected.</li>
+          <li>30 seconds will be deducted for incorrect answers.</li>
+          <li>Correct answers will increase your score by 5 points.</li>
           <li>
-            You will have 300 seconds to complete the quiz.
-          </li>
-          <li>
-            You may skip as many questions as you like.
-          </li>
-          <li>
-            Answers can not be changed once selected.
-          </li>
-          <li>
-            30 seconds will be deducted for incorrect answers.
-          </li>
-          <li>
-            Correct answers will increase your score by 5 points.
-          </li>
-          <li>
-            Every second of time remaining at quiz completion will increase your score by 1 points.
+            Every second of time remaining at quiz completion will increase your
+            score by 1 points.
           </li>
         </ul>
-        <button onclick="beginQuiz()">Start Quiz!</button>
+        <button class="hoverable-button" onclick="beginQuiz()">Start Quiz!</button>
       </section>
-      <section id="question-card" class="question-card ">
+      <section id="question-card" class="question-card">
         <h3 id="question-text-el"></h3>
-        <div id="answers-container-el">
-        </div>
+        <div id="answers-container-el"></div>
         <div id="question-notification-el"></div>
-        <button class="question-submit" onclick="skipQuestion()">Skip</button>
-        <!-- <button id="continue-button-el" class="question-submit"> -->
-          <!-- Continue -->
-        <!-- </button> -->
+        <button
+          id="next-question-button"
+          class="question-submit hoverable-button"
+          onclick="nextQuestion()"
+        >
+          Skip
+        </button>
       </section>
-      <section id="results" class="results ">
+      <section id="results" class="results">
         <p>Number of questions answered correctly:</p>
         <p id="correct-questions-el"></p>
         <p>Time Remaining:</p>
@@ -69,20 +62,22 @@
           maxlength="3"
         />
         <p id="invalid-initials-message">Field must contain 3 letters.</p>
-        <button id="save-button-el">Save Score</button>
-        <button onclick="pageLoad()">Retake Quiz</button>
+        <button class="hoverable-button" id="save-button-el">Save Score</button>
+        <button class="hoverable-button" onclick="pageLoad()">Retake Quiz</button>
       </section>
-      <section id="high-scores" class="high-scores ">
+      <section id="high-scores" class="high-scores">
         <h3>High Scores</h3>
-        <p id="empty-storage-message">There are no scores currently saved to local storage.</p>
-        <ol id="high-scores-ol">
-        </ol>
-        <button onclick="pageLoad()">Return to Quiz</button>
-        <button id="clear-scores-button">Clear Saved Scores</button>
+        <p id="empty-storage-message">
+          There are no scores currently saved to local storage.
+        </p>
+        <ol id="high-scores-ol"></ol>
+        <button class="hoverable-button" onclick="pageLoad()">Return to Quiz</button>
+        <button class="hoverable-button" id="clear-scores-button">Clear Saved Scores</button>
       </section>
     </main>
     <footer>
       <a
+        class="hoverable-text"
         href="https://github.com/mikeyrod22/WEB-API-CHALLENGE-code-quiz"
         target="_blank"
       >

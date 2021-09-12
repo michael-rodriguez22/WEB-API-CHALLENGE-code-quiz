@@ -37,9 +37,9 @@ function startTimer () {
 };
 
 function countdown() {
+  if (timeRemaining <= 0) return renderResults();
   timeRemaining --;
   document.getElementById("timer-el").innerText = `Time Remaining: ${timeRemaining}`;
-  if (timeRemaining <= 0) renderResults();
 }
 
 function stopTimer() {
@@ -51,21 +51,42 @@ function renderQuestion(question) {
   if (questionCounter >= questions.length) return renderResults();
   sections.intro.style.display = "none";
   sections.questionCard.style.display = "flex";
+  document.getElementById("question-notification-el").innerText = "";
+  document.getElementById("next-question-button").innerText = "Skip";
   document.getElementById("question-text-el").innerText = question.text;
   document.getElementById("answers-container-el").innerHTML = "";
   for (let i = 0; i < question.answers.length; i++) {
     let btn = document.createElement("button");
     btn.className = "answer-choice";
     btn.innerText = question.answers[i];
-    // btn.onclick = captureAnswer();
+    btn.className = "hoverable-button answer-choice";
+    btn.onclick = captureAnswer;
     document.getElementById("answers-container-el").appendChild(btn)
   }
 }
 
 // capture answer
+function captureAnswer(e) {
+  if (e.target.innerText.charAt(0) === questions[questionCounter].correct) {
+    correctQuestions ++;
+    document.getElementById("question-notification-el").innerText = "Correct!";
+  } else {
+    timeRemaining > 30 ? timeRemaining -= 30 : timeRemaining = 0;
+    document.getElementById("question-notification-el").innerText = `Incorrect... The correct answer was ${questions[questionCounter].correct}`;
+  }
+  for (item in e.target.parentElement.children) {
+    let button = e.target.parentElement.children[item];
+    button.onclick = "";
+    button.className = "answer-choice";
+    if (button !== e.target) {
+      button.className = "answer-choice non-selected"
+    }
+  }
+  document.getElementById("next-question-button").innerText = "Continue";
+}
 
-// skip question
-function skipQuestion() {
+// next question
+function nextQuestion() {
   questionCounter ++;
   renderQuestion(questions[questionCounter]);
 }
