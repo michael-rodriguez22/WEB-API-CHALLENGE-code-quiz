@@ -10,7 +10,7 @@
   </head>
   <body>
     <header>
-      <h1 class="title hoverable-text" onclick="pageLoad()">Michael's Code Quiz</h1>
+      <h1 class="title" onclick="pageLoad()">Michael's Code Quiz</h1>
       <div class="subtitle">
         <h2 class="hoverable-text" onclick="renderHighScores()">
           View High Scores
@@ -27,7 +27,7 @@
           <li>You may skip as many questions as you like.</li>
           <li>Answers can not be changed once selected.</li>
           <li>30 seconds will be deducted for incorrect answers.</li>
-          <li>Correct answers will increase your score by 5 points.</li>
+          <li>Correct answers will increase your score by 10 points.</li>
           <li>
             Every second of time remaining at quiz completion will increase your
             score by 1 points.
@@ -62,7 +62,7 @@
           maxlength="3"
         />
         <p id="invalid-initials-message">Field must contain 3 letters.</p>
-        <button class="hoverable-button" id="save-button-el">Save Score</button>
+        <button class="hoverable-button" onclick="saveScore()">Save Score</button>
         <button class="hoverable-button" onclick="pageLoad()">Retake Quiz</button>
       </section>
       <section id="high-scores" class="high-scores">
@@ -72,7 +72,7 @@
         </p>
         <ol id="high-scores-ol"></ol>
         <button class="hoverable-button" onclick="pageLoad()">Return to Quiz</button>
-        <button class="hoverable-button" id="clear-scores-button">Clear Saved Scores</button>
+        <button class="hoverable-button" id="clear-scores-button" onclick="clearScores()">Clear Saved Scores</button>
       </section>
     </main>
     <footer>
