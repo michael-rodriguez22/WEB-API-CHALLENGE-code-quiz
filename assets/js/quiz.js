@@ -11,23 +11,40 @@ const sections = {
 // page load
 let questionCounter;
 let correctQuestions;
-let score;
+let timeRemaining;
 function pageLoad() {
-  timerEl.style.display = "none";
+  timerEl.innerText = "";
   for (item in sections) sections[item].style.display = "none";
   sections.intro.style.display = "flex";
   questionCounter = 0;
   correctQuestions = 0;
   score = 0;
+  timeRemaining = 300;
 }
 pageLoad();
 
 // begin quiz
 function beginQuiz() {
-  // beginCountDown();
+  document.getElementById("timer-el").innerText = `Time Remaining: ${timeRemaining}`;
+  startTimer();
   questionCounter = 0;
   renderQuestion(questions[questionCounter])
 }
+
+// timer
+function startTimer () {
+  interval = setInterval(countdown, 1000);
+};
+
+function countdown() {
+  timeRemaining --;
+  document.getElementById("timer-el").innerText = `Time Remaining: ${timeRemaining}`;
+  if (timeRemaining <= 0) renderResults();
+}
+
+function stopTimer() {
+  clearInterval(interval);
+};
 
 // render question
 function renderQuestion(question) {
@@ -55,10 +72,14 @@ function skipQuestion() {
 
 // render results
 function renderResults() {
+  stopTimer();
+  document.getElementById("timer-el").innerText = "";
+  document.getElementById("invalid-initials-message").style.display = "none";
+  let score = timeRemaining + (correctQuestions * 5);
   sections.questionCard.style.display = "none";
   sections.results.style.display = "flex";
   document.getElementById("correct-questions-el").innerText = `${correctQuestions}/10`;
-  // document.getElementById("time-remaining-el").innerText = timeRemaining; 
+  document.getElementById("time-remaining-el").innerText = timeRemaining; 
   document.getElementById("final-score-el").innerText = score; 
 }
 
@@ -78,7 +99,6 @@ function renderHighScores() {
       li.innerText = `${store[i].initials}: ${store[i].score}`
       document.getElementById("high-scores-ol").appendChild(li);
     }
-
   }
 }
 
