@@ -1,12 +1,12 @@
 # Code Quiz
 
-For this challenge, I was tasked with creating a timed coding quiz from scratch. I did not utilize any frameworks or libraries, and instead used this as an opportunity to refresh my skills with vanilla HTML, CSS, and Javascript. I utilized two javascript files linked in separate script tags to mimic some basic modularization. I also utilized a few utility classes, such as hoverable text and hoverable buttons, to mimic repeatable functionality found in CSS frameworks.
+For this challenge, I was tasked with creating a timed coding quiz from scratch. I did not utilize any frameworks or libraries, and instead used this as an opportunity to refresh my skills with vanilla HTML, CSS, and Javascript. I utilized two Javascript files linked in separate script tags to provide basic modularization of code that is normally achieved with tools like Node. I also used a few utility classes, such as rows and hoverable buttons, to replicate repeatable functionality found in CSS frameworks.
 
-This page is responsive, meaning it will look great on any device! This page also features an intuitive and interactive UI / UX design. Through certain specific onclick handlers, I was able to mimic features of Single Page Applications that can be built with tools like React.
+This page is responsive, meaning you can enjoy this user interface on any device. This page also has some advanced characteristics, such as maintaining the state of multiple factors at all times, and dynamically rendering interactive content based on that state.
 
-The user is presented with the rules of the quiz upon pageload. Beginning the quiz starts a timer and presents a series of multiple choice questions. Users are able to save their scores to local storage upon completion of the quiz.
+The user is presented with the rules of the quiz upon page load. Beginning the quiz starts a timer and presents a series of multiple choice questions. Users are able to save their scores to local storage upon completion of the quiz.
 
-Deployed site is viewable <a href="">here</a>. Enjoy!
+Deployed site is viewable <a href="https://mikeyrod22.github.io/WEB-API-CHALLENGE-code-quiz/">here</a>. Enjoy!
 
 ***
 
